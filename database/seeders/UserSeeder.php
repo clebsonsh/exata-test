@@ -2,21 +2,21 @@
 
 namespace Database\Seeders;
 
-use Bouncer;
+use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class BouncerSeeder extends Seeder
+class UserSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      */
     public function run(): void
     {
-        Bouncer::allow('superadmin')->everything();
-        Bouncer::role()->firstOrCreate([
-            'name' => 'user',
-            'title' => 'User',
-        ]);
+        $users = User::factory(100)->create();
+
+        foreach ($users as $user) {
+            $user->assign('user');
+        }
     }
 }
