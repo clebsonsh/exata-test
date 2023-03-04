@@ -11,12 +11,12 @@ defineProps({
 </script>
 
 <template>
-    <Head title="Dashboard" />
+    <Head title="Users Index" />
 
     <AuthenticatedLayout>
         <template #header>
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-                Dashboard
+                Users Index
             </h2>
         </template>
 
