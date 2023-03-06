@@ -1,66 +1,119 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<p align="center"><img src="https://raw.githubusercontent.com/clebsonsh/exata-test/master/public/img/logo.png" width="100"></p>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+# Exata IT - Processo Seletivo - Desenvolvedor Pleno Laravel
 
-## About Laravel
+## Teste Desenvolvedor Pleno Laravel
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+> **Objetivo**: Desenvolver um aplicação usando Laravel e Vue.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+> > Montando o ambiente / boilerplate:
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+-   [x] Criar uma nova aplicação web com Laravel 10.
 
-## Learning Laravel
+-   [x] Configurar BD MySQL.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+-   [x] Adicionar o pacote Breeze.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+-   [x] Adicionar suporte ao Vue com SSR.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+-   [x] Adicionar pacote Bouncer para controle de roles de usuário (https://github.com/JosephSilber/bouncer).
 
-## Laravel Sponsors
+> > Customizando a aplicação:
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+-   [x] Desenvolver Seeder para criar um usuário “admin@exata.it” no role “superadmin” e uma senha aleatória que deve ser apresentada no console ao migrar.
 
-### Premium Partners
+-   [x] Desabilitar a funcionalidade de registro de novos usuários completamente.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+-   [x] Desenvolver uma tela com Vue para CRUD de usuários acessível apenas ao role “superadmin”.
 
-## Contributing
+-   [x] Utilizar o pacote Tailwind (https://tailwindcss.com/) para estilos.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+-   [ ] Utilizar o pacote PrimeVue (https://primevue.org/setup) para os componentes: DataTable, Input (group, text, number,etc), Button, etc.
 
-## Code of Conduct
+-   [ ] Menu lateral à esquerda (ocupando a tela).
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+-   [x] Barra no topo com nome do usuário e dropdown para logout.
 
-## Security Vulnerabilities
+## COMO RODAR O APP LOCAL
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+> **Pré-requisitos**:
 
-## License
+> > :heavy_exclamation_mark: **Procedimentos testados na linha de comando do Linux**
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+-   [Git](https://git-scm.com/downloads)
+
+-   [PHP ^8.2](https://www.php.net/downloads.php)
+
+-   [Composer](https://getcomposer.org/), para fazer a instalação das dependêcias
+
+-   [Docker](https://docs.docker.com/get-docker/), para rodar a aplicação usando o [Laravel Sail](https://laravel.com/docs/9.x/sail)
+
+> **Download e instalação**:
+
+-   Clone o repositório
+
+> > `git clone git@github.com:clebsonsh/exata-test.git`
+
+-   Vá para pasta do APP
+
+> > `cd exata-test`
+
+-   Instale as dependências PHP
+
+> > `composer install`
+
+-   Crie o arquivo _.env_ baseado no _.env.example_ (nesse arquivo já estão as configurações do banco de dados do docker)
+
+> > `cp .env.example .env`
+
+-   Gere a APP_KEY
+
+> > `php artisan key:generate`
+
+-   Inicie os containers Docker através do Laravel Sail (a primeira vez que rodar esse comando pode demorar, pois vai baixar e configurar todos containers usados pelo APP)
+
+> > `./vendor/bin/sail up -d`
+
+-   Instale as dependências JavaScript
+
+> > `./vendor/bin/sail yarn install`
+
+-   Rode a build dos assets JavaScript e CSS
+
+> > `./vendor/bin/sail yarn build`
+
+-   Rode as migrations com as seeds a senha de admin vai aparecer no terminal quando rodar esse comando
+
+> > `./vendor/bin/sail artisan migrate:fresh --seed`
+
+-   Rode o servidor de SSR
+
+> > `./vendor/bin/sail artisan inertia:start-ssr`
+
+A partir desse ponto o APP já estará rodando. O servidor local, o NodeJS e banco de dados MySQL não precisam ser instalados, pois tudo será provido pelo Docker/Lravel Sail.
+
+## COMO USAR O APP LOCAL
+
+O app pode ser acessado em http://127.0.0.1
+
+O mailpit pode ser acessado em http://127.0.0.1:8025 que é para onde vão os e-mail de recuperação de senha no ambiente de desenvolvimento
+
+No canto superior direito da home tem link para, já existe um Admin criado quando rodamos as seeds e outros usuários para teste
+
+Assim que logar você será redirecionado a parte administrativa do app, onde é possível criar, editar e deletar usuários
+
+## STACK USADA
+
+-   PHP
+-   JavaScript
+-   HTML
+-   CSS
+-   Laravel
+-   VueJS
+-   TailwindCSS
+-   MySQL
+-   Docker
+
+## OBESERVAÇÔES
+
+Não usei o PrimeVue, até tentei usar, gastei um bom tempo tentando entender como PrimeVue funciona mas não consegui fazer a integração dele. Acabei decidindo seguir sem esse pacote e entregar a funcionalidade do app
